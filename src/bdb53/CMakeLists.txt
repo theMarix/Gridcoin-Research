@@ -29,16 +29,6 @@ if(WIN32)
         --srcdir "${relative_dist_dir}"
     )
 endif()
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    list(APPEND BDB_FLAGS
-        CFLAGS=-Wno-implicit-function-declaration
-    )
-endif()
-if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-    list(APPEND BDB_FLAGS
-        CFLAGS=-Wno-error=implicit-int
-    )
-endif()
 
 # Make flags
 # ==========
